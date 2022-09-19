@@ -4,8 +4,18 @@ package day0917;
 import java.util.Arrays;
 import java.util.Collections;
 
+/**
+ * 0917 지뢰찾기 코딩테스트
+ * 해당 위치 클릭시 열리는 칸의 갯수 구하기
+ * * : 지뢰
+ * - : 열리는 칸
+ * 0~9 : 주변 지뢰 갯수
+ */
+
 class Solution {
+    //지뢰
     private static final String BOUND = "*";
+    //열리는 칸
     private static final String OPEN = "-";
 
 
@@ -60,7 +70,7 @@ class Solution {
         }
     }
 
-    //지뢰 BOUND, 열림표시 OPEN, 지뢰 유무 0~
+    //실행 메소드
     public int solution(int N,int[][] mine, int[] P){
         int answer = 0;
 
@@ -72,7 +82,6 @@ class Solution {
         for(int i=0 ; i<mine.length ; i++) {
             int mineX = mine[i][0]-1;
             int mineY = mine[i][1]-1;
-
             array[mineX][mineY] = BOUND; //지뢰 표시
 
         }
